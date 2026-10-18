@@ -25,7 +25,7 @@
   <article class="card">
     <a class="back-link" href="./">← SpywareMonitor</a>
     <h1>Privacy Policy</h1>
-    <p class="tagline">Last updated: 16 October 2026</p>
+    <p class="tagline">Last updated: 18 October 2026</p>
 
     <p>This privacy policy explains how Nordic Appworks ("we", "us") handles information in the SpywareMonitor Android app (package name <code>app.spywaremonitor.mobile</code>) and on the website <a href="https://spywaremonitor.app/">spywaremonitor.app</a>.</p>
     <p><strong>In short:</strong> the app has no internet permission. Everything it checks and records stays on your phone. We do not collect, sell or share personal data, and the app contains no ads, analytics or tracking.</p>
@@ -40,7 +40,7 @@
         <td>Until you clear the app's data or uninstall the app</td>
       </tr>
       <tr>
-        <td>Phone settings: screen lock set or not, USB debugging and developer options on or off</td>
+        <td>Phone settings: screen lock set or not, USB debugging and developer options on or off, whether the phone is managed (device or profile owner) or has a work profile, and which apps may install other apps</td>
         <td>Showing settings that make spying easier</td>
         <td>Checked at each scan, not stored separately</td>
       </tr>
@@ -48,6 +48,16 @@
         <td>History: when an app that could watch you was found, installed, got access or was removed</td>
         <td>Letting you look back, and the evidence report</td>
         <td>The latest 2,000 events, until you clear the app's data or uninstall the app</td>
+      </tr>
+      <tr>
+        <td>Unlock log (Pro, only if you switch it on): the times the lock screen went away, or, on a phone without a screen lock, the times the screen was turned on. Not what was done, and not who did it</td>
+        <td>Showing whether your phone was used while you weren't there, for example just before an app was installed</td>
+        <td>90 days, until you switch Usage access off and clear the app's data, or uninstall the app</td>
+      </tr>
+      <tr>
+        <td>App lock (Pro, only if you switch it on): a salted hash of the PIN you choose, never the PIN itself</td>
+        <td>Asking for the PIN when the app opens</td>
+        <td>Until you switch the lock off, clear the app's data or uninstall the app</td>
       </tr>
       <tr>
         <td>Your choices: trusted apps, background monitoring on or off, Pro bought or not</td>
@@ -66,7 +76,7 @@
     <p>If you create an evidence report, the app makes a PDF file on your phone and opens Android's share menu. You decide where the file goes. SpywareMonitor never sends the file anywhere by itself, and keeps only the latest report.</p>
 
     <h2>4. Notifications</h2>
-    <p>If you switch on background monitoring, the app shows a notification when an app is installed or gets access that lets it watch you. On the lock screen it only says "Open SpywareMonitor for details", so the details are not shown to someone holding your phone.</p>
+    <p>If you switch on background monitoring, the app shows a notification when an app is installed or gets access that lets it watch you. On the lock screen it only says "Open SpywareMonitor for details" (or the name you chose if the app is disguised), so the details are not shown to someone holding your phone.</p>
 
     <h2>5. Permissions</h2>
     <ul class="perm-list">
@@ -74,6 +84,8 @@
       <li><code>POST_NOTIFICATIONS</code>: for warnings from background monitoring. The app only asks for it when you switch monitoring on.</li>
       <li><code>RECEIVE_BOOT_COMPLETED</code>: to keep the hourly check scheduled after the phone restarts.</li>
       <li><code>com.android.vending.BILLING</code>: to buy Pro through Google Play.</li>
+      <li><code>PACKAGE_USAGE_STATS</code> (Usage access): only for the unlock log, and only if you allow it yourself in Android's settings after the app has explained what it reads. The app reads only when the lock screen went away or the screen was turned on, not which apps you use. You can switch it off there at any time.</li>
+      <li><code>USE_BIOMETRIC</code>: to unlock the app with your fingerprint, if you choose to. The app never sees your fingerprint; Android only tells it whether the check succeeded.</li>
     </ul>
 
     <h2>6. Website</h2>

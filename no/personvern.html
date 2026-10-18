@@ -25,7 +25,7 @@
   <article class="card">
     <a class="back-link" href="./">← SpywareMonitor</a>
     <h1>Personvernerklæring</h1>
-    <p class="tagline">Sist oppdatert: 16. oktober 2026</p>
+    <p class="tagline">Sist oppdatert: 18. oktober 2026</p>
 
     <p>Denne personvernerklæringen forklarer hvordan Nordic Appworks («vi», «oss») behandler informasjon i Android-appen SpywareMonitor (pakkenavn <code>app.spywaremonitor.mobile</code>) og på nettstedet <a href="https://spywaremonitor.app/no/">spywaremonitor.app</a>.</p>
     <p><strong>Kort fortalt:</strong> appen har ingen internettilgang. Alt den sjekker og registrerer, blir på telefonen din. Vi samler ikke inn, selger eller deler personopplysninger, og appen har ingen reklame, analyse eller sporing.</p>
@@ -40,7 +40,7 @@
         <td>Til du tømmer appdataene eller avinstallerer appen</td>
       </tr>
       <tr>
-        <td>Telefoninnstillinger: om skjermlås er satt opp, om USB-feilsøking og utvikleralternativer er på</td>
+        <td>Telefoninnstillinger: om skjermlås er satt opp, om USB-feilsøking og utvikleralternativer er på, om telefonen styres (enhets- eller profileier) eller har en jobbprofil, og hvilke apper som kan installere andre apper</td>
         <td>Vise innstillinger som gjør overvåking enklere</td>
         <td>Sjekkes ved hver skanning, lagres ikke separat</td>
       </tr>
@@ -48,6 +48,16 @@
         <td>Historikk: når en app som kan overvåke deg ble funnet, installert, fikk tilgang eller ble fjernet</td>
         <td>La deg se tilbake, og bevisrapporten</td>
         <td>De siste 2000 hendelsene, til du tømmer appdataene eller avinstallerer appen</td>
+      </tr>
+      <tr>
+        <td>Opplåsingslogg (Pro, bare hvis du slår den på): tidspunktene da låseskjermen forsvant, eller på en telefon uten skjermlås, tidspunktene da skjermen ble slått på. Ikke hva som ble gjort, og ikke hvem som gjorde det</td>
+        <td>Vise om telefonen ble brukt mens du ikke var der, for eksempel rett før en app ble installert</td>
+        <td>90 dager, til du slår av Brukstilgang og tømmer appdataene, eller avinstallerer appen</td>
+      </tr>
+      <tr>
+        <td>Applås (Pro, bare hvis du slår den på): en saltet hash av PIN-koden du velger, aldri selve PIN-koden</td>
+        <td>Be om PIN-koden når appen åpnes</td>
+        <td>Til du slår av låsen, tømmer appdataene eller avinstallerer appen</td>
       </tr>
       <tr>
         <td>Dine valg: klarerte apper, overvåking i bakgrunnen på eller av, Pro kjøpt eller ikke</td>
@@ -66,7 +76,7 @@
     <p>Hvis du lager en bevisrapport, lager appen en PDF-fil på telefonen og åpner Androids delingsmeny. Du bestemmer hvor filen sendes. SpywareMonitor sender aldri filen noe sted selv, og beholder bare den siste rapporten.</p>
 
     <h2>4. Varsler</h2>
-    <p>Hvis du slår på overvåking i bakgrunnen, viser appen et varsel når en app installeres eller får tilgang som lar den overvåke deg. På låseskjermen står det bare «Åpne SpywareMonitor for detaljer», slik at detaljene ikke vises for noen som holder telefonen din.</p>
+    <p>Hvis du slår på overvåking i bakgrunnen, viser appen et varsel når en app installeres eller får tilgang som lar den overvåke deg. På låseskjermen står det bare «Åpne SpywareMonitor for detaljer» (eller navnet du valgte hvis appen er forkledd), slik at detaljene ikke vises for noen som holder telefonen din.</p>
 
     <h2>5. Tillatelser</h2>
     <ul class="perm-list">
@@ -74,6 +84,8 @@
       <li><code>POST_NOTIFICATIONS</code>: for varsler fra overvåkingen i bakgrunnen. Appen ber om dette først når du slår overvåkingen på.</li>
       <li><code>RECEIVE_BOOT_COMPLETED</code>: for å holde den timevise kontrollen planlagt etter omstart.</li>
       <li><code>com.android.vending.BILLING</code>: for å kjøpe Pro via Google Play.</li>
+      <li><code>PACKAGE_USAGE_STATS</code> (Brukstilgang): bare for opplåsingsloggen, og bare hvis du selv tillater det i Androids innstillinger etter at appen har forklart hva den leser. Appen leser bare når låseskjermen forsvant eller skjermen ble slått på, ikke hvilke apper du bruker. Du kan slå det av der når som helst.</li>
+      <li><code>USE_BIOMETRIC</code>: for å låse opp appen med fingeravtrykk, hvis du velger det. Appen ser aldri fingeravtrykket ditt; Android forteller bare om sjekken lyktes.</li>
     </ul>
 
     <h2>6. Nettsted</h2>
