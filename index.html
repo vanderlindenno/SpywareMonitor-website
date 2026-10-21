@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SpywareMonitor – Find Spyware and Stalkerware on Android</title>
-  <meta name="description" content="SpywareMonitor checks which apps on your Android phone could be watching you: known stalkerware, hidden apps, apps that read your screen or notifications. No internet, no ads, nothing leaves your phone.">
+  <meta name="description" content="Is someone watching your phone? SpywareMonitor finds stalkerware and apps that could spy on you on Android. No internet, no ads, nothing leaves your phone.">
   <link rel="canonical" href="https://spywaremonitor.app/">
   <link rel="alternate" hreflang="en" href="https://spywaremonitor.app/">
   <link rel="alternate" hreflang="nb" href="https://spywaremonitor.app/no/">
@@ -15,6 +15,14 @@
   <meta property="og:title" content="SpywareMonitor – Find Spyware and Stalkerware on Android">
   <meta property="og:description" content="Which apps on your phone could be watching you? No internet, no ads, nothing leaves your phone.">
   <meta property="og:url" content="https://spywaremonitor.app/">
+  <meta property="og:image" content="https://spywaremonitor.app/img/screens/check.webp">
+  <meta property="og:image:width" content="432">
+  <meta property="og:image:height" content="928">
+  <meta property="og:image:alt" content="The SpywareMonitor Check screen">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SpywareMonitor – Find Spyware and Stalkerware on Android">
+  <meta name="twitter:description" content="Which apps on your phone could be watching you? No internet, no ads, nothing leaves your phone.">
+  <meta name="twitter:image" content="https://spywaremonitor.app/img/screens/check.webp">
   <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
   {
@@ -23,7 +31,10 @@
     "name": "SpywareMonitor",
     "operatingSystem": "Android",
     "applicationCategory": "SecurityApplication",
-    "description": "Finds apps on your Android phone that could be used to watch you: known stalkerware, hidden apps, apps that read your screen or notifications, and apps installed outside an app store. Works without internet.",
+    "description": "Finds apps on your Android phone that could be used to watch you: known stalkerware, hidden apps, apps that read your screen or notifications, and apps installed outside an app store. Checks phone settings, shows safe next steps, and works without internet.",
+    "url": "https://spywaremonitor.app/",
+    "screenshot": "https://spywaremonitor.app/img/screens/check.webp",
+    "inLanguage": ["en", "nb", "nl"],
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
     "publisher": { "@type": "Organization", "name": "Nordic Appworks" }
   }
@@ -42,7 +53,11 @@
       { "@type": "Question", "name": "Can SpywareMonitor find every kind of spyware?",
         "acceptedAnswer": { "@type": "Answer", "text": "No scanner can promise that. Apps in a work profile and spyware on a rooted phone cannot be seen by any normal app. SpywareMonitor is honest about this and shows what it can check." } },
       { "@type": "Question", "name": "Is SpywareMonitor free?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The scan is free. Pro is a single payment, no subscription, and adds background monitoring, a history and an evidence report as PDF." } }
+        "acceptedAnswer": { "@type": "Answer", "text": "The check, the phone settings and the safety steps are free. Pro is a single payment, no subscription, and adds automatic checks with discreet notifications, History, an unlock log, an evidence report as PDF, and a disguise and PIN lock for the app." } },
+      { "@type": "Question", "name": "Can I hide SpywareMonitor on my phone?",
+        "acceptedAnswer": { "@type": "Answer", "text": "With Pro you can disguise the app as Notes, Weather, Recipes or Planner and lock it with a PIN. Its notifications never say what was found. The arrow at the top right closes the app at once. Google's purchase receipt email and Play order history do name the app." } },
+      { "@type": "Question", "name": "I feel watched, but nothing was found. What now?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Following often happens through accounts, not apps. Stop location sharing in Google Maps, check the devices on your Google account and your recovery email and number, and scan for a hidden tracker. Do account changes on another device." } }
     ]
   }
   </script>
@@ -60,6 +75,29 @@
   <section class="card">
     <h1>Is someone watching your phone?</h1>
     <p class="tagline">SpywareMonitor checks which apps on your Android phone could be used to spy on you – and explains why, in plain language. No internet, no ads, nothing leaves your phone.</p>
+    <p><a class="play-btn" href="help.html">How it works, step by step</a></p>
+  </section>
+
+  <section class="card">
+    <h2>See what it looks like</h2>
+    <div class="screens">
+      <figure>
+        <img src="img/screens/check.webp" width="432" height="928" loading="lazy" decoding="async" alt="Check screen: an orange ring saying one app needs your attention, with cards for Apps, Phone settings and Unlock log">
+        <figcaption>The check: one look tells you if something needs attention</figcaption>
+      </figure>
+      <figure>
+        <img src="img/screens/apps.webp" width="432" height="928" loading="lazy" decoding="async" alt="Apps tab listing one app that can read the screen, is hidden and is not from the Play Store">
+        <figcaption>Apps: only those that could watch you, with the reasons</figcaption>
+      </figure>
+      <figure>
+        <img src="img/screens/safety.webp" width="432" height="928" loading="lazy" decoding="async" alt="Safety tab with the situations: An app may be watching me, Someone else unlocked my phone, My phone settings aren't safe, I feel watched but nothing was found">
+        <figcaption>Safety: pick your situation, get steps in a safe order</figcaption>
+      </figure>
+      <figure>
+        <img src="img/screens/history.webp" width="432" height="928" loading="lazy" decoding="async" alt="History tab with All, Apps and Unlocks filters and a list of days with unlocks and app changes">
+        <figcaption>History (Pro): when apps came, and when the phone was unlocked</figcaption>
+      </figure>
+    </div>
   </section>
 
   <section class="card">
@@ -70,19 +108,21 @@
       <li>Apps that can <strong>read your screen</strong> (accessibility), <strong>read your notifications</strong> or act as <strong>device admin</strong></li>
       <li>Apps installed from a file or another source instead of an app store</li>
       <li>Risky combinations, such as background location together with microphone and SMS</li>
-      <li>Phone settings that make spying easier: no screen lock, USB debugging, developer options</li>
+      <li>Phone settings that make spying easier: no screen lock, USB debugging, Developer options, apps that may install other apps, a phone managed by someone else</li>
     </ul>
-    <p>Every app gets green, orange or red, with the reasons. Apps you trust, such as your password manager, can be marked so they stay quiet.</p>
+    <p><strong>Orange</strong> means an app has access that could be misused – often it's harmless, so take a look first. <strong>Red</strong> means it is on the list of known stalkerware. Every app comes with the reasons, and who made it. Apps you put on your phone yourself, such as your password manager, can be marked as known; you're told if one is ever replaced by someone else's version.</p>
   </section>
 
   <section class="card">
     <h2>Pro: one payment, no subscription</h2>
     <ul class="check-list">
-      <li><strong>Background monitoring</strong>: a warning as soon as an app can start watching you. On the lock screen it only says "Open SpywareMonitor for details".</li>
-      <li><strong>History</strong>: when which app was installed, got access or was removed</li>
-      <li><strong>Evidence report (PDF)</strong> to share with the police, a lawyer or a support organisation</li>
+      <li><strong>Automatic checks</strong>: every hour, every day or once a week. A notification only when something needs a look – it never says what was found, just the app's name and "Tap to open". You can delay notifications by an hour.</li>
+      <li><strong>Unlock log</strong>: when your phone was unlocked, so you notice if someone used it while you weren't there</li>
+      <li><strong>History</strong>: when which app was installed, got access or was removed, day by day</li>
+      <li><strong>Evidence report (PDF)</strong> in English, Norwegian or Dutch, to share with the police, a lawyer or a support organisation</li>
+      <li><strong>Disguise and lock</strong>: show the app as Notes, Weather, Recipes or Planner, and ask for a PIN or fingerprint when it opens</li>
     </ul>
-    <p>The scan stays free. Your history is already kept in the free version, so it is all there when you get Pro.</p>
+    <p>The check stays free. Your history is already kept in the free version, so it is all there when you get Pro. Good to know: Google's purchase receipt email and your Play order history name the app.</p>
   </section>
 
   <div class="two-col">
@@ -100,14 +140,15 @@
     <h2>Before you remove anything</h2>
     <ul class="check-list">
       <li>Removing spyware can warn the person who installed it. Think about your safety first.</li>
-      <li>Keep evidence: take screenshots, or photos with another phone.</li>
-      <li>Talk to someone you trust, the police or a support line, preferably from a phone that is not being watched.</li>
+      <li>Keep evidence: the evidence report, screenshots, or photos with another phone.</li>
+      <li>Talk to someone you trust, the police or a support line, preferably from a phone that is not being watched. In Norway: 116 006. In the Netherlands: Veilig Thuis, 0800-2000.</li>
       <li>Change important passwords from another device.</li>
       <li>In immediate danger, call your local emergency number.</li>
     </ul>
+    <p>The app's <strong>Safety</strong> tab walks you through this for your situation: an app may be watching you, someone else unlocked your phone, your settings aren't safe, or you feel watched but nothing was found. The arrow at the top right closes the app at once. <a href="help.html#found">Read what to do when something is found</a>.</p>
   </section>
 
-  <section class="card faq" id="faq"><h2>Frequently asked questions</h2><details><summary>How can I tell if there is spyware on my Android phone?</summary><p>Look for apps you don't recognise that are hidden from the app drawer, can read your screen (accessibility) or your notifications, are device admins, or were installed from a file instead of the Play Store. SpywareMonitor checks all of this and compares your apps with a list of 131 known stalkerware apps.</p></details><details><summary>Does SpywareMonitor send my data anywhere?</summary><p>No. The app has no internet permission, so nothing can leave your phone. There is no account, no ads and no analytics.</p></details><details><summary>Should I remove spyware right away?</summary><p>Removing it can warn the person who installed it. Think about your safety first, keep evidence, and talk to someone you trust, the police or a support line, preferably from a phone that is not being watched.</p></details><details><summary>Can SpywareMonitor find every kind of spyware?</summary><p>No scanner can promise that. Apps in a work profile and spyware on a rooted phone cannot be seen by any normal app. SpywareMonitor is honest about this and shows what it can check.</p></details><details><summary>Is SpywareMonitor free?</summary><p>The scan is free. Pro is a single payment, no subscription, and adds background monitoring, a history and an evidence report as PDF.</p></details></section>
+  <section class="card faq" id="faq"><h2>Frequently asked questions</h2><details><summary>How can I tell if there is spyware on my Android phone?</summary><p>Look for apps you don't recognise that are hidden from the app drawer, can read your screen (accessibility) or your notifications, are device admins, or were installed from a file instead of the Play Store. SpywareMonitor checks all of this and compares your apps with a list of 131 known stalkerware apps.</p></details><details><summary>Does SpywareMonitor send my data anywhere?</summary><p>No. The app has no internet permission, so nothing can leave your phone. There is no account, no ads and no analytics.</p></details><details><summary>Should I remove spyware right away?</summary><p>Removing it can warn the person who installed it. Think about your safety first, keep evidence, and talk to someone you trust, the police or a support line, preferably from a phone that is not being watched.</p></details><details><summary>Can SpywareMonitor find every kind of spyware?</summary><p>No scanner can promise that. Apps in a work profile and spyware on a rooted phone cannot be seen by any normal app. SpywareMonitor is honest about this and shows what it can check.</p></details><details><summary>Is SpywareMonitor free?</summary><p>The check, the phone settings and the safety steps are free. Pro is a single payment, no subscription, and adds automatic checks with discreet notifications, History, an unlock log, an evidence report as PDF, and a disguise and PIN lock for the app.</p></details><details><summary>Can I hide SpywareMonitor on my phone?</summary><p>With Pro you can disguise the app as Notes, Weather, Recipes or Planner and lock it with a PIN. Its notifications never say what was found. The arrow at the top right closes the app at once. Google's purchase receipt email and Play order history do name the app.</p></details><details><summary>I feel watched, but nothing was found. What now?</summary><p>Following often happens through accounts, not apps. Stop location sharing in Google Maps, check the devices on your Google account and your recovery email and number, and scan for a hidden tracker. Do account changes on another device. <a href="help.html#watched">More in the help</a>.</p></details><p>More questions? Read the <a href="help.html">step-by-step help</a>.</p></section>
 
   <section class="card play-card">
     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
