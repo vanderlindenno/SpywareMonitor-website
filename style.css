@@ -197,3 +197,24 @@ code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; fon
 .quick-exit:hover { background: #8c1d18; }
 .safety { border-left: 6px solid var(--warning-text); background: var(--warning-bg); }
 .safety h2 { color: var(--warning-text); margin-top: 0; }
+
+/* Help page: text beside an annotated screenshot */
+.help { max-width: 900px; margin-left: auto; margin-right: auto; }
+.help h2 { margin-top: 36px; }
+.help-toc { background: var(--bg); border-radius: 14px; padding: 14px 22px; margin: 22px 0; }
+.help-toc h2 { margin: 0 0 6px; font-size: 18px; }
+.help-toc ol { margin: 0; padding-left: 22px; }
+.help-toc li { margin: 6px 0; }
+.help-row { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 32px; align-items: start; margin: 16px 0; }
+.shot { margin: 0; text-align: center; }
+.shot img { width: 100%; height: auto; border-radius: 22px; box-shadow: 0 8px 25px rgba(0, 0, 0, .18); }
+.shot figcaption { margin-top: 10px; color: var(--muted); font-size: 15px; }
+.warn { background: var(--warning-bg); color: var(--warning-text); border-radius: 10px; padding: 12px 16px; }
+.dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; vertical-align: 0; }
+.dot.green { background: #2e7d32; }
+.dot.orange { background: #e08a2e; }
+.dot.red { background: #c62828; }
+@media (max-width: 760px) {
+  .help-row { grid-template-columns: 1fr; }
+  .shot { max-width: 270px; margin: 0 auto; }
+}

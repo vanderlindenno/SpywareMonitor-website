@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpywareMonitor Help: Find Spyware on Your Android Phone</title>
+  <meta name="description" content="Simple, step-by-step help for SpywareMonitor: check your Android phone for spyware and stalkerware, understand what was found, and what to do safely next.">
+  <link rel="canonical" href="https://spywaremonitor.app/help.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#004d40">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SpywareMonitor">
+  <meta property="og:title" content="SpywareMonitor Help: Is Someone Watching My Phone?">
+  <meta property="og:description" content="Plain-language help: check your Android phone for spyware and stalkerware, understand what was found, and what to do safely next.">
+  <meta property="og:url" content="https://spywaremonitor.app/help.html">
+  <meta property="og:image" content="https://spywaremonitor.app/img/help/check.webp">
+  <meta property="og:image:width" content="540">
+  <meta property="og:image:height" content="1160">
+  <meta property="og:image:alt" content="The SpywareMonitor Check screen after a check that found one app">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SpywareMonitor Help: Is Someone Watching My Phone?">
+  <meta name="twitter:description" content="Check your Android phone for spyware and stalkerware, and what to do safely if something is found.">
+  <meta name="twitter:image" content="https://spywaremonitor.app/img/help/check.webp">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How can I tell if someone is watching my Android phone?",
+        "acceptedAnswer": { "@type": "Answer", "text": "SpywareMonitor checks every installed app for access that could be used to watch you, such as reading your screen or notifications, hiding its icon or being installed from outside an app store. It also compares apps with a list of known spyware (stalkerware) and checks phone settings that make it easier for someone to get in. Everything happens on your phone; nothing is sent anywhere." }
+      },
+      {
+        "@type": "Question",
+        "name": "What do orange and red mean in SpywareMonitor?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Orange means an app has access that could be misused. Often it is harmless, for example a password manager or a smartwatch app, so take a look first. Red means the app is on the list of known spyware." }
+      },
+      {
+        "@type": "Question",
+        "name": "SpywareMonitor found something. Should I remove the app straight away?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Removing an app or changing passwords can warn the person who put it there. First keep evidence (the evidence report or screenshots), then get help from someone you trust, the police or a support organisation, from a phone that isn't being watched. Remove the app when it feels safe. The Safety tab shows these steps in a safe order." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does SpywareMonitor send my data anywhere?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. The app has no internet permission, so it cannot send anything. What it checks and records stays on your phone and is not included in cloud backup." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the person watching me see that I use SpywareMonitor?",
+        "acceptedAnswer": { "@type": "Answer", "text": "They might, if they hold your phone. With Pro you can disguise the app as Notes, Weather, Recipes or Planner and lock it with a PIN. Notifications never say what was found, but Android always shows the app's name in them. Google's purchase receipt email and Play order history also name the app." }
+      },
+      {
+        "@type": "Question",
+        "name": "I feel watched, but SpywareMonitor found nothing. What now?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Following often happens through accounts, not apps. Stop location sharing in Google Maps, check the devices signed in to your Google account, check your recovery email and phone number, and look for a hidden tracker. Do account changes on another phone or computer." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is any spyware check 100% reliable?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No check can promise 100%. Some apps, for example in a work profile, stay hidden, and new spyware may not be on the list yet. If you still feel unsafe, talk to the police or a support organisation." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "SpywareMonitor", "item": "https://spywaremonitor.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Help", "item": "https://spywaremonitor.app/help.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>SpywareMonitor</a>
+    <a class="quick-exit" href="https://www.google.com/" rel="noreferrer" onclick="location.replace(this.href); return false;">Quick exit</a>
+  </div>
+</header>
+
+<main class="container">
+  <article class="card help">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="./">SpywareMonitor</a> › Help</nav>
+    <h1>SpywareMonitor help: check your phone for spyware, step by step</h1>
+    <p class="tagline">For anyone who worries that someone, such as a partner or ex, is secretly watching their Android phone. Plain words, one question at a time.</p>
+
+    <div class="note">
+      <p><strong>Take your time.</strong> Checking your phone changes nothing on it, and nobody gets a message that you checked. If you are in danger right now, call the police.</p>
+    </div>
+
+    <nav class="help-toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#what-it-does">What does SpywareMonitor do?</a></li>
+        <li><a href="#check-screen">How do I read the Check screen?</a></li>
+        <li><a href="#found">Something was found. What now?</a></li>
+        <li><a href="#safety-tab">What's going on? Pick your situation</a></li>
+        <li><a href="#pro">What does Pro add?</a></li>
+        <li><a href="#history">How do I use History?</a></li>
+        <li><a href="#private">How do I keep this private?</a></li>
+        <li><a href="#help">Where can I get help?</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="what-it-does">What does SpywareMonitor do?</h2>
+    <p>SpywareMonitor looks at the apps on your phone and asks one question: <strong>could this app be used to watch you?</strong> It checks:</p>
+    <ul class="check-list">
+      <li><strong>Every installed app</strong>: can it read your screen or your notifications, does it hide its icon, was it installed from a file instead of an app store, does it pretend to be part of Android?</li>
+      <li><strong>A list of known spyware</strong> (also called stalkerware), from <a href="https://github.com/AssoEchap/stalkerware-indicators">Echap</a> (CC BY 4.0). The list is built into the app.</li>
+      <li><strong>Your phone settings</strong>: is there a screen lock, are USB debugging and Developer options off, can other apps install apps?</li>
+    </ul>
+
+    <h3>Does anything leave my phone?</h3>
+    <p>No. The app has <strong>no internet permission</strong>, so it can't send anything anywhere. Not to us, not to anyone. Read more in the <a href="privacy.html">privacy policy</a>.</p>
+
+    <h3>What can't it do?</h3>
+    <ul class="check-list">
+      <li>No check is 100% sure. Some apps, for example in a work profile, stay hidden, and brand-new spyware may not be on the list yet.</li>
+      <li>It can't see your accounts. Someone can follow you through your Google account, shared location or a tracker tag, without any app on your phone. See <a href="#watched">I feel watched, but nothing was found</a>.</li>
+      <li>It never removes or changes anything by itself. You decide.</li>
+    </ul>
+
+    <h2 id="check-screen">How do I read the Check screen?</h2>
+    <div class="help-row">
+      <div>
+        <p>Open the app and it checks your phone in a few seconds. The big <strong>ring</strong> shows the result:</p>
+        <ul class="check-list">
+          <li><span class="dot green" aria-hidden="true"></span><strong>Green</strong>: nothing was found that could watch you.</li>
+          <li><span class="dot orange" aria-hidden="true"></span><strong>Orange</strong>: an app has access that <em>could</em> be misused. Often it's harmless, like a password manager or a smartwatch app. Take a look first.</li>
+          <li><span class="dot red" aria-hidden="true"></span><strong>Red</strong>: an app is on the list of <strong>known spyware</strong>.</li>
+        </ul>
+        <p>Below the ring are three cards:</p>
+        <ul class="check-list">
+          <li><strong>Apps</strong>: how many apps need your attention.</li>
+          <li><strong>Phone settings</strong>: how many settings make it easy for someone to get in.</li>
+          <li><strong>Unlock log</strong> (Pro): when your phone was unlocked today.</li>
+        </ul>
+        <p><strong>Tap the ring</strong>, or <strong>Apps</strong>, to see what was found. Pull the screen down to check again.</p>
+      </div>
+      <figure class="shot">
+        <img src="img/help/check.webp" width="540" height="1160" loading="lazy" decoding="async"
+             alt="SpywareMonitor Check screen: an orange ring with '1 app needs your attention', circled in red, the cards Apps, Phone settings and Unlock log in a red box, and an arrow to the quick exit button at the top right">
+        <figcaption>The Check screen after a check that found one app.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Which app was found, and why?</h3>
+    <div class="help-row">
+      <div>
+        <p>The <strong>Apps</strong> tab lists only apps that could be used to watch you. Most apps on your phone are fine and are not shown.</p>
+        <p>Under each app you see in a few words what it can do, for example <em>Can read your screen · Hidden · Not from the Play Store</em>. <strong>Tap the app</strong> to see all the reasons, who made it, and when it was installed.</p>
+        <p>Do you know the app, because you put it there yourself? Then you can mark it as known. It then no longer counts, and you are told if it is ever replaced by someone else's version.</p>
+      </div>
+      <figure class="shot">
+        <img src="img/help/apps.webp" width="540" height="1160" loading="lazy" decoding="async"
+             alt="SpywareMonitor Apps tab with one app under 'Needs your attention', boxed in red, with an arrow and the label 'Tap the app to see why'">
+        <figcaption>The Apps tab: tap an app to see why it is listed.</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="found">Something was found. What do I do now?</h2>
+    <p class="warn"><strong>Don't remove the app straight away.</strong> Removing it, or changing your passwords, can warn the person who put it there. That can make things more dangerous. Keep evidence first and think about your safety.</p>
+    <div class="help-row">
+      <div>
+        <p>On the app's page, tap <strong>What to do now</strong>. You get the steps in a safe order:</p>
+        <ol class="steps">
+          <li><strong>Keep evidence</strong>: save the evidence report, or take screenshots of the app and what it can do.</li>
+          <li><strong>Get help before you change anything</strong>: talk it through with someone you trust, the police or a support organisation, from a phone that isn't being watched.</li>
+          <li><strong>Change your passwords, on another device</strong>: Google first, then your email and social media. On this phone, spyware could see what you type.</li>
+          <li><strong>Remove the app</strong>, when you've kept the evidence and it feels safe.</li>
+          <li><strong>Factory reset</strong>, if the app comes back or can't be removed. Back up your photos first, somewhere the other person can't reach.</li>
+        </ol>
+      </div>
+      <figure class="shot">
+        <img src="img/help/detail.webp" width="540" height="1160" loading="lazy" decoding="async"
+             alt="The page of a found app: 'This app could be watching you' boxed in red, the reasons why, and an arrow to 'What to do now, 5 steps, in a safe order'">
+        <figcaption>The page of a found app, with the reasons and the steps.</figcaption>
+      </figure>
+    </div>
+    <div class="help-row">
+      <div>
+        <p>Each step has a button that takes you to the right place, such as <strong>Save report</strong> or <strong>See the apps</strong>.</p>
+      </div>
+      <figure class="shot">
+        <img src="img/help/steps_app.webp" width="540" height="1160" loading="lazy" decoding="async"
+             alt="The steps for 'An app may be watching me', with step 1 'Keep evidence' and its Save report button boxed in red">
+        <figcaption>Step 1 is always: keep evidence.</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="safety-tab">What's going on? Pick your situation in the Safety tab</h2>
+    <div class="help-row">
+      <div>
+        <p>Open the <strong>Safety</strong> tab. Under <strong>What's going on?</strong>, tap what fits. The app already suggests one, based on your last check.</p>
+      </div>
+      <figure class="shot">
+        <img src="img/help/safety_sits.webp" width="540" height="1160" loading="lazy" decoding="async"
+             alt="The Safety tab with the four situations boxed in red: An app may be watching me, Someone else unlocked my phone, My phone settings aren't safe, I feel watched but nothing was found">
+        <figcaption>The four situations in the Safety tab.</figcaption>
+      </figure>
+    </div>
+
+    <h3>An app may be watching me</h3>
+    <p>For when the check found something. You get the five steps above: keep evidence, get help, change passwords on another device, remove the app, factory reset if it comes back.</p>
+
+    <h3>Someone else unlocked my phone</h3>
+    <p>For example when History shows an unlock at a time you didn't have your phone. The steps:</p>
+    <ol class="steps">
+      <li><strong>Change your PIN</strong> (or set a screen lock if you have none). Pick one the other person can't guess: not a birthday, not your old PIN with one digit changed.</li>
+      <li><strong>Close the other ways in</strong>: remove fingerprints and faces you don't know, and turn off Smart Lock or Extend Unlock.</li>
+      <li><strong>Let the screen lock sooner</strong>: after 30 seconds, so the phone is locked when you put it down.</li>
+      <li><strong>Look at what happened then</strong>: History shows which apps came or got access around that time.</li>
+      <li><strong>Run a check now</strong>, to see whether an app was put on your phone.</li>
+    </ol>
+
+    <h3>My phone settings aren't safe</h3>
+    <p>Some settings make it easy for someone to get into your phone and secretly install apps. You see each one with a <strong>Fix this</strong> button that opens the right place in your phone's settings. For example: set a screen lock, turn off USB debugging, turn off Developer options.</p>
+
+    <h3 id="watched">I feel watched, but nothing was found</h3>
+    <p>Following often happens through <strong>accounts</strong>, not apps. The steps:</p>
+    <ol class="steps">
+      <li><strong>Stop sharing your location</strong> in Google Maps (your profile picture, then Location sharing). Check family locator apps too.</li>
+      <li><strong>Check the devices on your Google account</strong> and sign out any you don't know.</li>
+      <li><strong>Check your recovery email and number.</strong> If they aren't yours, someone else can get into your account.</li>
+      <li><strong>Look for a hidden tracker</strong>: a small tag in a bag or car can show where you are. In Settings, open Safety and emergency, then Unknown tracker alerts, and tap Scan now.</li>
+    </ol>
+    <p>Do account changes on <strong>another phone or computer</strong>, one the other person can't reach.</p>
+
+    <h2 id="pro">What does SpywareMonitor Pro add?</h2>
+    <p>Pro is <strong>one payment, no subscription</strong>. Still no internet and no ads. It adds:</p>
+
+    <h3>Automatic checks</h3>
+    <div class="help-row">
+      <div>
+        <p>The app checks by itself: <strong>every hour</strong> (recommended: a new app is noticed the same day), <strong>every day</strong> or <strong>once a week</strong>, at a time you choose. Go to <strong>Settings</strong> (the gear at the top) → <strong>Check automatically</strong>.</p>
+        <p>You only get a notification when something needs a look. It <strong>never says what was found</strong> and never uses the word spyware: it only shows the app's name and <em>Tap to open</em>.</p>
+        <p><strong>Delay notifications by an hour</strong> if someone else might be holding your phone when a notification would appear.</p>
+        <p class="warn"><strong>Good to know:</strong> Android always shows the app's real name at the top of a notification. So also <a href="#private">disguise the app and lock it with a PIN</a>.</p>
+      </div>
+      <figure class="shot">
+        <img src="img/help/schedule.webp" width="540" height="1160" loading="lazy" decoding="async"
+             alt="The Check automatically options boxed in red: Off, Every hour, Every day and Once a week">
+        <figcaption>Choose how often the app checks by itself.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Unlock log</h3>
+    <p>Spyware is usually put on a phone while someone has it unlocked in their hands. The unlock log shows <strong>when your phone was unlocked</strong>, so you can see if it happened while you weren't there. It only shows successful unlocks: not failed attempts, not what was done and not who did it. You allow it yourself in Android (Usage access), and can switch it off there at any time.</p>
+
+    <h3>Evidence report (PDF)</h3>
+    <p>All findings and the history in one PDF file, to show the police or a support organisation. The app makes it on your phone and opens Android's share menu; you decide where it goes. Find it in the Safety tab under <strong>Evidence</strong>.</p>
+
+    <h3>Disguise and PIN lock</h3>
+    <p>See <a href="#private">How do I keep this private?</a> below.</p>
+
+    <h2 id="history">How do I use History?</h2>
+    <div class="help-row">
+      <div>
+        <p>The <strong>History</strong> tab shows, day by day, when apps were installed, got access or were removed, and (with the unlock log on) when your phone was unlocked.</p>
+        <p>Use the buttons at the top to show <strong>All</strong>, only <strong>Apps</strong>, or only <strong>Unlocks</strong>. Tap a day to see the times.</p>
+        <p>Look for an unlock at a time you didn't have your phone, just before an app was installed.</p>
+      </div>
+      <figure class="shot">
+        <img src="img/help/history.webp" width="540" height="1160" loading="lazy" decoding="async"
+             alt="The History tab with the filter buttons All, Apps and Unlocks boxed in red, above a list of days with unlocks">
+        <figcaption>Filter History by All, Apps or Unlocks.</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="private">How do I keep this app private?</h2>
+    <div class="help-row">
+      <div>
+        <ul class="check-list">
+          <li><strong>Quick exit</strong>: tap the arrow at the top right. The app closes at once and stays out of recent apps. This website has a red Quick exit button too.</li>
+          <li><strong>Disguise the app</strong> (Pro): it then shows as <strong>Notes, Weather, Recipes or Planner</strong>, with an everyday icon, on your home screen, in the app and in its notifications. Android's own Settings keep showing the real name.</li>
+          <li><strong>Lock the app</strong> (Pro): ask for a PIN, or your fingerprint, when it opens. Only use your fingerprint if no one else's fingerprint is saved on the phone.</li>
+          <li><strong>Payment</strong>: Google's purchase receipt email and your Google Play order history always name the app. Keep that in mind if someone else can read your email or Google account.</li>
+          <li><strong>This website</strong>: visiting it shows up in your browser history. Open it on another device if that is safer.</li>
+        </ul>
+      </div>
+      <figure class="shot">
+        <img src="img/help/disguise.webp" width="540" height="1160" loading="lazy" decoding="async"
+             alt="The Disguise the app options boxed in red: Notes, Weather, Recipes and Planner">
+        <figcaption>Pick an everyday name and icon.</figcaption>
+      </figure>
+    </div>
+    <div class="help-row">
+      <div>
+        <p>You find Disguise and Lock in <strong>Settings</strong> (the gear at the top) under <strong>Protect this app</strong>, and at the top of the Safety tab.</p>
+      </div>
+      <figure class="shot">
+        <img src="img/help/settings.webp" width="540" height="1160" loading="lazy" decoding="async"
+             alt="SpywareMonitor Settings with Automatic checks and Delay notifications boxed in red, and Disguise the app and Lock the app boxed in red">
+        <figcaption>Settings: automatic checks, disguise and PIN lock.</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="help">Where can I get help?</h2>
+    <p>You don't have to deal with this alone. Help is free, and you can stay anonymous. Call from a phone that isn't being watched.</p>
+    <ul class="check-list">
+      <li><strong>In danger right now?</strong> Call the police: 112 in Europe.</li>
+      <li><strong>Norway</strong>: Vold- og overgrepslinjen, <a href="tel:116006">116 006</a>, free and anonymous, day and night.</li>
+      <li><strong>Netherlands</strong>: Veilig Thuis, <a href="tel:08002000">0800-2000</a>, free and anonymous, day and night.</li>
+      <li><strong>Elsewhere</strong>: the police, or a domestic violence helpline in your country.</li>
+    </ul>
+    <p>Bring the evidence report or your screenshots. They help the police or a support worker to understand what happened.</p>
+
+    <div class="cta">
+      <h2>Questions about the app?</h2>
+      <p>Read <a href="./">what SpywareMonitor is</a>, the <a href="privacy.html">privacy policy</a>, or <a href="./#contact">contact us</a>.</p>
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <div>© 2026 Nordic Appworks • SpywareMonitor</div>
+  <nav>
+    <a href="./">Home</a>
+    <a href="help.html">Help</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="./#contact">Contact</a>
+    <a href="no/" hreflang="nb" lang="nb">Norsk</a>
+  </nav>
+</footer>
+</body>
+</html>
