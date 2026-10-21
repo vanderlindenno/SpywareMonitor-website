@@ -125,7 +125,7 @@
     <ul class="check-list">
       <li><strong>Every installed app</strong>: can it read your screen or your notifications, does it hide its icon, was it installed from a file instead of an app store, does it pretend to be part of Android?</li>
       <li><strong>A list of known spyware</strong> (also called stalkerware), from <a href="https://github.com/AssoEchap/stalkerware-indicators">Echap</a> (CC BY 4.0). The list is built into the app.</li>
-      <li><strong>Your phone settings</strong>: is there a screen lock, are USB debugging and Developer options off, can other apps install apps?</li>
+      <li><strong>Your phone settings</strong>: is there a screen lock, are USB debugging and Developer options off, can other apps install apps? Are there signs that the phone is rooted?</li>
     </ul>
 
     <h3>Does anything leave my phone?</h3>
@@ -133,7 +133,7 @@
 
     <h3>What can't it do?</h3>
     <ul class="check-list">
-      <li>No check is 100% sure. Some apps, for example in a work profile, stay hidden, and brand-new spyware may not be on the list yet.</li>
+      <li>No check is 100% sure. Some apps, for example in a work profile, stay hidden, and brand-new spyware may not be on the list yet. Well-hidden rooting can't be seen by any app.</li>
       <li>It can't see your accounts. Someone can follow you through your Google account, shared location or a tracker tag, without any app on your phone. See <a href="#watched">I feel watched, but nothing was found</a> and the guide <a href="phone-tracking-without-spyware.html">Can someone track your phone without spyware?</a></li>
       <li>It never removes or changes anything by itself. You decide.</li>
     </ul>
@@ -234,6 +234,7 @@
 
     <h3>My phone settings aren't safe</h3>
     <p>Some settings make it easy for someone to get into your phone and secretly install apps. You see each one with a <strong>Fix this</strong> button that opens the right place in your phone's settings. For example: set a screen lock, turn off USB debugging, turn off Developer options.</p>
+    <p>If the app finds signs that the phone is <strong>rooted</strong>, you see <em>This phone may be rooted</em>. Rooting gives apps full control of the phone, spyware too. If you didn't do this yourself, ask someone you trust to look at it. This line only appears when signs are found.</p>
 
     <h3 id="watched">I feel watched, but nothing was found</h3>
     <p>Following often happens through <strong>accounts</strong>, not apps. The steps:</p>
@@ -251,15 +252,15 @@
     <h3>Automatic checks</h3>
     <div class="help-row">
       <div>
-        <p>The app checks by itself: <strong>every hour</strong> (recommended: a new app is noticed the same day), <strong>every day</strong> or <strong>once a week</strong>, at a time you choose. Go to <strong>Settings</strong> (the gear at the top) → <strong>Check automatically</strong>.</p>
+        <p>The app checks by itself, <strong>every hour</strong>, so a new app is noticed the same day. Go to <strong>Settings</strong> (the gear at the top) and switch on <strong>Check automatically</strong> (1). The first time, the app first shows you how its notifications look.</p>
         <p>You only get a notification when something needs a look. It <strong>never says what was found</strong> and never uses the word spyware: it only shows the app's name and <em>Tap to open</em>.</p>
-        <p><strong>Delay notifications by an hour</strong> if someone else might be holding your phone when a notification would appear.</p>
+        <p>With checks on, a second switch appears: <strong>Delay notifications by an hour</strong> (2). Use it if someone else might be holding your phone when a notification would appear.</p>
         <p class="warn"><strong>Good to know:</strong> Android always shows the app's real name at the top of a notification. So also <a href="#private">disguise the app and lock it with a PIN</a>.</p>
       </div>
       <figure class="shot">
-        <img src="img/help/schedule.webp" width="540" height="1160" loading="lazy" decoding="async"
-             alt="The Check automatically options boxed in red: Off, Every hour, Every day and Once a week">
-        <figcaption>Choose how often the app checks by itself.</figcaption>
+        <img src="img/help/auto-check.webp" width="540" height="1160" loading="lazy" decoding="async"
+             alt="SpywareMonitor Settings with two switches circled in red: 1, Check automatically, every hour, and 2, Delay notifications by an hour">
+        <figcaption>1: check every hour. 2: delay notifications by an hour.</figcaption>
       </figure>
     </div>
 
@@ -267,7 +268,7 @@
     <p>Spyware is usually put on a phone while someone has it unlocked in their hands. The unlock log shows <strong>when your phone was unlocked</strong>, so you can see if it happened while you weren't there. It only shows successful unlocks: not failed attempts, not what was done and not who did it. You allow it yourself in Android (Usage access), and can switch it off there at any time.</p>
 
     <h3>Evidence report (PDF)</h3>
-    <p>All findings and the history in one PDF file, to show the police or a support organisation. The app makes it on your phone and opens Android's share menu; you decide where it goes. Find it in the Safety tab under <strong>Evidence</strong>.</p>
+    <p>All findings and the history in one PDF file, to show the police or a support organisation. It is made in the language the app is in: English, Norwegian or Dutch. The app makes it on your phone and opens Android's share menu; you decide where it goes. Find it in the Safety tab under <strong>Evidence</strong>.</p>
 
     <h3>Disguise and PIN lock</h3>
     <p>See <a href="#private">How do I keep this private?</a> below.</p>
