@@ -260,3 +260,10 @@ code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; fon
   .feature p { font-size: 14px; }
 }
 [id] { scroll-margin-top: 84px; }
+
+/* Video: text beside a click-to-play thumbnail (as on rebootmonitor.com) */
+.promo { display: flex; gap: 48px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.promo-text { flex: 1 1 280px; max-width: 440px; }
+.promo-text h2 { margin: 0 0 12px; }
+.promo-text p { margin: 0 0 20px; }
+@media (max-width: 760px) { .promo { gap: 24px; } .promo-text { max-width: none; } }

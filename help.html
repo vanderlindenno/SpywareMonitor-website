@@ -109,6 +109,17 @@
       </ol>
     </nav>
 
+    <h2 id="video">Prefer to watch? See the app in 83 seconds</h2>
+    <div class="help-row">
+      <div>
+        <p>This short video shows the most important parts: the check, what orange and red mean, why you shouldn't remove an app straight away, and the steps in the Safety tab.</p>
+        <p>The video only loads from YouTube when you press play. <a href="https://youtube.com/shorts/Z8IuLAVodtc" target="_blank" rel="noopener">Watch it on YouTube</a> instead.</p>
+      </div>
+      <div class="yt" data-id="Z8IuLAVodtc">
+        <button type="button" aria-label="Play the 83-second SpywareMonitor video"><picture><source srcset="img/video/intro-thumb.webp" type="image/webp"><img src="img/video/intro-thumb.jpg" width="540" height="960" alt="Video thumbnail: Is someone watching your phone? SpywareMonitor finds spyware on Android" loading="lazy" decoding="async"></picture><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.8v16.4a1 1 0 0 0 1.5.9l13-8.2a1 1 0 0 0 0-1.7l-13-8.2A1 1 0 0 0 6 3.8z"/></svg></span></button>
+      </div>
+    </div>
+
     <h2 id="what-it-does">What does SpywareMonitor do?</h2>
     <p>SpywareMonitor looks at the apps on your phone and asks one question: <strong>could this app be used to watch you?</strong> It checks:</p>
     <ul class="check-list">
@@ -329,5 +340,6 @@
     <a href="no/" hreflang="nb" lang="nb">Norsk</a>
   </nav>
 </footer>
+<script>document.querySelectorAll('.yt').forEach(function(box){var btn=box.querySelector('button');if(!btn)return;btn.addEventListener('click',function(){if(location.protocol==='file:'){window.open('https://youtube.com/shorts/'+box.getAttribute('data-id'),'_blank','noopener');return;}var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+box.getAttribute('data-id')+'?autoplay=1&rel=0&playsinline=1';f.title='SpywareMonitor in 83 seconds (video)';f.allow='accelerometer; autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';box.replaceChildren(f);});});</script>
 </body>
 </html>
