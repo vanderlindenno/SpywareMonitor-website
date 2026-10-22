@@ -54,6 +54,11 @@
       },
       {
         "@type": "Question",
+        "name": "What is the safest way to set up SpywareMonitor?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Do five things first, in Settings: 1. Disguise the app, for example as Weather. 2. Lock it with a PIN that differs from your phone's PIN, and only use your fingerprint if no one else's is saved. 3. Switch on Check automatically, so it checks every hour. 4. If someone else sometimes holds your phone, switch on Delay notifications by an hour. 5. Switch on the Unlock log. Remember the Quick exit arrow at the top right." }
+      },
+      {
+        "@type": "Question",
         "name": "I feel watched, but SpywareMonitor found nothing. What now?",
         "acceptedAnswer": { "@type": "Answer", "text": "Following often happens through accounts, not apps. Stop location sharing in Google Maps, check the devices signed in to your Google account, check your recovery email and phone number, and look for a hidden tracker. Do account changes on another phone or computer." }
       },
@@ -95,9 +100,70 @@
       <p><strong>Take your time.</strong> Checking your phone changes nothing on it, and nobody gets a message that you checked. If you are in danger right now, call the police.</p>
     </div>
 
+    <section class="setup" id="setup" aria-labelledby="setup-h">
+      <p class="setup-badge">Recommended setup</p>
+      <h2 id="setup-h">Set up the app safely, in 5 steps</h2>
+      <p>Do this <strong>first</strong>, before anything else. It takes about 5 minutes. Afterwards, someone who picks up your phone sees an ordinary app, can't open it, and gets no clue from its notifications. Steps 1 to 5 need <a href="#pro">Pro</a>.</p>
+      <p>Start in <strong>Settings</strong>: the <strong>gear</strong> at the top right of the app.</p>
+
+      <ol class="setup-steps">
+        <li>
+          <h3>Disguise the app</h3>
+          <p>Tap <strong>Disguise the app</strong> and pick an everyday name, for example <strong>Weather</strong>. The app closes and comes back as Weather, with a weather icon. Look for it in your <strong>app drawer</strong> (swipe up on the home screen): the old icon on your home screen is gone.</p>
+          <p class="small">Why first? Then everything after it, including notifications, already shows the everyday name.</p>
+        </li>
+        <li>
+          <h3>Lock it with a PIN</h3>
+          <p>Tap <strong>Lock the app</strong>, then <strong>Choose a PIN</strong>. Type 4 to 8 digits, tap the <strong>tick</strong>, and type the same PIN again.</p>
+          <ul class="check-list">
+            <li>Choose a PIN that is <strong>different from your phone's PIN</strong>: the person you're worried about may know that one.</li>
+            <li>Fingerprint? Only say yes if <strong>no one else's fingerprint</strong> is saved on your phone.</li>
+            <li><strong>Don't forget it.</strong> A forgotten PIN can only be removed by clearing the app's data, and then its history is gone too.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Switch on Check automatically</h3>
+          <p>The app then checks your phone <strong>every hour</strong> by itself. You only get a notification when something needs a look, and it never says what was found.</p>
+        </li>
+        <li>
+          <h3>Delay notifications by an hour <span class="optional">if needed</span></h3>
+          <p>Switch this on if someone else sometimes holds your phone. A notification then waits an hour before it appears.</p>
+        </li>
+        <li>
+          <h3>Switch on the Unlock log</h3>
+          <p>Tap <strong>Unlock log</strong> and follow the steps: Android asks you to allow <strong>Usage access</strong> for the app. From then on you can see when your phone was unlocked, so you notice if someone used it while you weren't there.</p>
+        </li>
+      </ol>
+
+      <div class="screens setup-shots">
+        <figure>
+          <img src="img/help/disguise.webp" width="540" height="1160" loading="lazy" decoding="async" alt="Step 1: the Disguise the app list with Notes, Weather, Recipes and Planner boxed in red">
+          <figcaption>Step 1: pick an everyday name and icon</figcaption>
+        </figure>
+        <figure>
+          <img src="img/help/setup-pin.webp" width="540" height="1160" loading="lazy" decoding="async" alt="Step 2: the Choose a PIN screen, with the PIN dots and the tick button circled in red">
+          <figcaption>Step 2: choose a PIN, then tap the tick</figcaption>
+        </figure>
+        <figure>
+          <img src="img/help/setup-switches.webp" width="540" height="1160" loading="lazy" decoding="async" alt="Steps 3 to 5 in Settings, numbered in red: 3 Check automatically, 4 Delay notifications by an hour, 5 Unlock log">
+          <figcaption>Steps 3, 4 and 5 in Settings</figcaption>
+        </figure>
+      </div>
+
+      <div class="setup-also">
+        <h3>Good to know, also without Pro</h3>
+        <ul class="check-list">
+          <li><strong>Quick exit:</strong> the arrow at the top right closes the app at once. Use it if someone walks in.</li>
+          <li><strong>Your phone's own lock:</strong> make sure your phone has a screen lock that the other person doesn't know. The Check screen tells you if it hasn't.</li>
+          <li><strong>The receipt:</strong> Google's purchase receipt email and your Play order history always show the real name, SpywareMonitor.</li>
+        </ul>
+      </div>
+    </section>
+
     <nav class="help-toc" aria-label="On this page">
       <h2>On this page</h2>
       <ol>
+        <li><a href="#setup"><strong>Recommended setup: protect the app in 5 steps</strong></a></li>
         <li><a href="#what-it-does">What does SpywareMonitor do?</a></li>
         <li><a href="#check-screen">How do I read the Check screen?</a></li>
         <li><a href="#found">Something was found. What now?</a></li>

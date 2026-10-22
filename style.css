@@ -271,3 +271,19 @@ code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; fon
 .mini-card h3 { margin: 0 0 6px; font-size: 17px; color: var(--primary-dark); }
 .mini-card p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .mini-cards { grid-template-columns: 1fr; } }
+
+/* Help: recommended setup, high on the page */
+.setup { border: 2px solid var(--primary); background: #f3faf8; border-radius: 16px; padding: 22px 26px; margin: 24px 0; }
+.setup h2 { margin: 4px 0 10px; }
+.setup-badge { display: inline-block; margin: 0; background: var(--primary); color: #fff; font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; }
+.setup-steps { list-style: none; counter-reset: step; padding: 0; margin: 18px 0; }
+.setup-steps > li { counter-increment: step; position: relative; padding: 0 0 0 58px; margin: 0 0 20px; }
+.setup-steps > li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; background: #d32f2f; color: #fff; font-weight: 700; font-size: 20px; display: flex; align-items: center; justify-content: center; }
+.setup-steps h3 { margin: 6px 0 6px; color: var(--primary-dark); }
+.setup-steps p { margin: 0 0 8px; }
+.optional { font-size: 13px; font-weight: 600; color: var(--muted); background: #fff; border: 1px solid var(--border); border-radius: 999px; padding: 2px 10px; margin-left: 6px; vertical-align: 2px; }
+.setup-shots { margin: 10px 0 18px; }
+.setup-shots img { border-radius: 18px; }
+.setup-also { background: #fff; border-radius: 12px; padding: 14px 18px; }
+.setup-also h3 { margin: 0 0 6px; }
+@media (max-width: 600px) { .setup { padding: 18px 16px; } .setup-steps > li { padding-left: 50px; } }
