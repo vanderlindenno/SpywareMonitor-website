@@ -287,3 +287,5 @@ code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; fon
 .setup-also { background: #fff; border-radius: 12px; padding: 14px 18px; }
 .setup-also h3 { margin: 0 0 6px; }
 @media (max-width: 600px) { .setup { padding: 18px 16px; } .setup-steps > li { padding-left: 50px; } }
+.setup-nopro { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; }
+.help h2 .optional { font-size: 14px; vertical-align: 4px; }
