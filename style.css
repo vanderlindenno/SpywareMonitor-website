@@ -289,3 +289,37 @@ code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; fon
 @media (max-width: 600px) { .setup { padding: 18px 16px; } .setup-steps > li { padding-left: 50px; } }
 .setup-nopro { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; }
 .help h2 .optional { font-size: 14px; vertical-align: 4px; }
+
+/* Phones: a compact sticky header (name, icon and Quick exit on one row, the whole menu below),
+   tables that wrap long words, and FAQ questions that are easy to tap */
+.faq summary { padding: 10px 0; }
+.back-link { padding: 10px 0; }
+@media (max-width: 760px) {
+  .site-header { padding: 8px 14px 4px; }
+  .site-header .inner { gap: 8px; }
+  .site-header .brand { font-size: 19px; gap: 8px; min-width: 0; }
+  .site-header .brand svg { width: 32px; height: 32px; border-radius: 8px; }
+  .quick-exit { padding: 8px 12px; min-height: 40px; font-size: 15px; }
+  .topnav { margin: 0 -6px; justify-content: space-between; scrollbar-width: none; }
+  .topnav::-webkit-scrollbar { display: none; }
+  .topnav a { font-size: 14px; padding: 10px 6px; }
+  td, th { overflow-wrap: anywhere; hyphens: auto; }
+  [id] { scroll-margin-top: 110px; }
+}
+@media (max-width: 360px) {
+  .site-header .brand { font-size: 17px; }
+  .topnav a { font-size: 13px; padding: 10px 4px; }
+}
+
+/* Phones: privacy tables as stacked blocks, each value with its column name */
+@media (max-width: 600px) {
+  .card table, .card tbody, .card tr, .card td { display: block; width: auto; }
+  .card tr:first-child { display: none; }
+  .card tr { border-bottom: 1px solid var(--border); padding: 12px 0; }
+  .card td { border: 0; padding: 3px 0; overflow-wrap: normal; hyphens: manual; }
+  .card td:first-child { font-weight: 600; }
+  .card td:nth-child(2)::before { content: "Purpose: "; font-weight: 600; color: var(--primary-dark); }
+  .card td:nth-child(3)::before { content: "Retention: "; font-weight: 600; color: var(--primary-dark); }
+  :lang(nb) .card td:nth-child(2)::before { content: "Formål: "; }
+  :lang(nb) .card td:nth-child(3)::before { content: "Lagringstid: "; }
+}
