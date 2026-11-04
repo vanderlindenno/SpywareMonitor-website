@@ -4,7 +4,7 @@ Source of **[spywaremonitor.app](https://spywaremonitor.app/)**, the website of 
 
 ## About the app
 
-- Finds known stalkerware (131 apps, by name and signing certificate), hidden apps, apps that read your screen or notifications, device admins and apps installed outside an app store
+- Finds known stalkerware (132 apps, by name and signing certificate), hidden apps, apps that read your screen or notifications, device admins and apps installed outside an app store
 - Checks screen lock, USB debugging and developer options
 - Pro (one payment): background monitoring, history and an evidence report (PDF)
 - No internet permission, no ads, no account. All data stays on the device.
@@ -18,6 +18,7 @@ Made by Nordic Appworks, who also make [UpdateMonitor](https://updatemonitor.app
 |------|-------|
 | [Home](https://spywaremonitor.app/) | Overview, safety advice, FAQ |
 | [Norsk](https://spywaremonitor.app/no/) | Norwegian homepage |
+| [Nederlands](https://spywaremonitor.app/nl/) | Dutch homepage |
 | [Privacy policy](https://spywaremonitor.app/privacy.html) | What the app and the website do with data |
 | [Personvern](https://spywaremonitor.app/no/personvern.html) | Norwegian privacy policy |
 
