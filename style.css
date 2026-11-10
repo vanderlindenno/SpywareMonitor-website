@@ -323,3 +323,20 @@ code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; fon
   :lang(nb) .card td:nth-child(2)::before { content: "Formål: "; }
   :lang(nb) .card td:nth-child(3)::before { content: "Lagringstid: "; }
 }
+
+/* Right-to-left pages (Arabic): mirror indents, borders and lists */
+[dir="rtl"] .check-list, [dir="rtl"] .perm-list, [dir="rtl"] .details-grid ul, [dir="rtl"] .help-toc ol { padding-left: 0; padding-right: 20px; }
+[dir="rtl"] th, [dir="rtl"] td { text-align: right; }
+[dir="rtl"] .safety { border-left: 0; border-right: 6px solid var(--warning-text); }
+[dir="rtl"] .play-card { border-left: 0; border-right: 6px solid var(--accent); }
+[dir="rtl"] .dot { margin-right: 0; margin-left: 8px; }
+[dir="rtl"] .setup-steps > li { padding: 0 58px 0 0; }
+[dir="rtl"] .setup-steps > li::before { left: auto; right: 0; }
+
+/* Phones, all languages: feature tiles never wider than half the screen, and the menu wraps instead of hiding items */
+@media (max-width: 760px) {
+  .features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .feature h3, .feature p { overflow-wrap: break-word; hyphens: auto; }
+  .topnav { flex-wrap: wrap; justify-content: center; overflow-x: visible; row-gap: 0; }
+  .topnav a { padding: 8px 6px; }
+}
