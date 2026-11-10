@@ -340,3 +340,19 @@ code { background: var(--accent-soft); padding: 1px 6px; border-radius: 6px; fon
   .topnav { flex-wrap: wrap; justify-content: center; overflow-x: visible; row-gap: 0; }
   .topnav a { padding: 8px 6px; }
 }
+
+/* Video page: the vertical player beside the chapters, the full text below */
+.watch { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 32px; align-items: start; margin: 20px 0 10px; }
+.watch-player { aspect-ratio: 9 / 16; border-radius: 22px; overflow: hidden; background: #000; box-shadow: 0 8px 25px rgba(0, 0, 0, .25); }
+.watch-player iframe { width: 100%; height: 100%; border: 0; display: block; }
+.watch-text h2 { margin-top: 18px; }
+.chapters { padding-left: 0; list-style: none; margin: 0 0 18px; }
+.chapters li { margin: 6px 0; }
+.chapters a { display: inline-block; min-width: 46px; font-weight: 700; }
+.transcript { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 8px 12px; margin: 10px 0; }
+.transcript dt { font-weight: 700; color: var(--primary); }
+.transcript dd { margin: 0; }
+@media (max-width: 760px) {
+  .watch { grid-template-columns: 1fr; }
+  .watch-player { max-width: 300px; margin: 0 auto; width: 100%; }
+}
