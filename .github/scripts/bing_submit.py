@@ -1,7 +1,10 @@
-"""Tell Bing about new or changed pages after a push (Bing Webmaster URL submission API).
+"""Tell Bing about new or changed pages after a push.
 
-Reads the API key from the BING_API_KEY environment variable (a GitHub Actions
-secret), never prints it, and never fails the workflow: problems are logged only.
+First through IndexNow (Bing, Yandex, Seznam, Naver): no account needed, only the key
+file at the site root (<key>.txt). Then, if the BING_API_KEY secret is set, also
+through the Bing Webmaster URL submission API, which only works once the site is
+verified in Bing Webmaster Tools under the account that owns the key.
+Never prints the API key and never fails the workflow: problems are logged only.
 """
 import json
 import os
@@ -13,13 +16,13 @@ import urllib.request
 
 MAX_URLS = 50
 ENDPOINT = 'https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlBatch?apikey='
+INDEXNOW = 'https://api.indexnow.org/indexnow'
 
 key = os.environ.get('BING_API_KEY', '').strip()
-if not key:
-    print('BING_API_KEY is not set as a repository secret; nothing submitted.')
-    sys.exit(0)
-
-site = 'https://' + open('CNAME', encoding='utf-8').read().strip()
+host = open('CNAME', encoding='utf-8').read().strip()
+site = 'https://' + host
+# The IndexNow key is the name of the 32-character .txt file at the site root
+indexnow_key = next((f[:-4] for f in os.listdir('.') if re.fullmatch(r'[0-9a-f]{32}\.txt', f)), None)
 
 
 def skip(path):
@@ -65,6 +68,24 @@ if not urls:
 print('Submitting %d URL(s) for %s:' % (len(urls), site))
 for u in urls:
     print('  ' + u)
+
+if indexnow_key:
+    body = json.dumps({'host': host, 'key': indexnow_key,
+                       'keyLocation': site + '/' + indexnow_key + '.txt', 'urlList': urls}).encode('utf-8')
+    req = urllib.request.Request(INDEXNOW, data=body, headers={'Content-Type': 'application/json; charset=utf-8'})
+    try:
+        resp = urllib.request.urlopen(req, timeout=60)
+        print('IndexNow accepted:', resp.status)
+    except urllib.error.HTTPError as e:
+        print('IndexNow returned an error (workflow continues):', e.code, e.read().decode('utf-8')[:300])
+    except Exception as e:
+        print('Could not reach IndexNow (workflow continues):', type(e).__name__)
+else:
+    print('No IndexNow key file at the site root; IndexNow skipped.')
+
+if not key:
+    print('BING_API_KEY is not set as a repository secret; Bing Webmaster API skipped.')
+    sys.exit(0)
 
 body = json.dumps({'siteUrl': site, 'urlList': urls}).encode('utf-8')
 req = urllib.request.Request(ENDPOINT + key, data=body,
