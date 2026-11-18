@@ -4,11 +4,13 @@ Source of **[spywaremonitor.app](https://spywaremonitor.app/)**, the website of 
 
 ## About the app
 
-- Finds known stalkerware (132 apps, by name and signing certificate), hidden apps, apps that read your screen or notifications, device admins and apps installed outside an app store
-- Checks screen lock, USB debugging and developer options
-- Pro (one payment): background monitoring, history and an evidence report (PDF)
+- Finds known stalkerware (132 apps, by name and signing certificate), hidden apps, apps that read your screen or notifications, device admins, and apps installed from a file or from a computer over USB instead of an app store
+- Shows family and tracking apps (27 apps, such as Life360 and Qustodio) in orange, never red, with a plain explanation
+- Checks the keyboard, screen lock, USB debugging and developer options
+- Access (free): which apps may use the microphone, location, camera, contacts, messages and other access, and what is normal for them
+- Pro (one payment): automatic checks, unlock log, history, an evidence report (PDF), and disguise and PIN lock
 - No internet permission, no ads, no account. All data stays on the device.
-- Available in English, Norwegian and Dutch
+- Available in 10 languages: English, Norwegian, Dutch, German, French, Spanish, Polish, Simplified Chinese, Hindi and Arabic
 
 Made by Nordic Appworks, who also make [UpdateMonitor](https://updatemonitor.app/) and [RebootMonitor](https://rebootmonitor.com/).
 
@@ -17,8 +19,10 @@ Made by Nordic Appworks, who also make [UpdateMonitor](https://updatemonitor.app
 | Page | Topic |
 |------|-------|
 | [Home](https://spywaremonitor.app/) | Overview, safety advice, FAQ |
-| [Norsk](https://spywaremonitor.app/no/) | Norwegian homepage |
+| [Help](https://spywaremonitor.app/help.html) | Step-by-step help for the app |
+| [Norsk](https://spywaremonitor.app/no/) | Norwegian homepage, with [help](https://spywaremonitor.app/no/hjelp.html) |
 | [Nederlands](https://spywaremonitor.app/nl/) | Dutch homepage |
+| [de](https://spywaremonitor.app/de/), [fr](https://spywaremonitor.app/fr/), [es](https://spywaremonitor.app/es/), [pl](https://spywaremonitor.app/pl/), [zh](https://spywaremonitor.app/zh/), [hi](https://spywaremonitor.app/hi/), [ar](https://spywaremonitor.app/ar/) | Homepages in German, French, Spanish, Polish, Simplified Chinese, Hindi and Arabic |
 | [Privacy policy](https://spywaremonitor.app/privacy.html) | What the app and the website do with data |
 | [Personvern](https://spywaremonitor.app/no/personvern.html) | Norwegian privacy policy |
 

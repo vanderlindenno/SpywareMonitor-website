@@ -41,7 +41,7 @@
       {
         "@type": "Question",
         "name": "Hva betyr oransje og rødt i SpywareMonitor?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Oransje betyr at en app har tilgang som kan misbrukes. Ofte er det ufarlig, for eksempel en passordbehandler eller en app til en smartklokke, så se på det først. Rødt betyr at appen står på listen over kjente spionprogrammer." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Oransje betyr at en app har tilgang som kan misbrukes. Ofte er det ufarlig, for eksempel en passordbehandler eller en app til en smartklokke, så se på det først. Familie- og sporingsapper, som Life360, er alltid oransje, aldri røde. Rødt betyr at appen står på listen over kjente spionprogrammer." }
       },
       {
         "@type": "Question",
@@ -191,10 +191,13 @@
     <h2 id="hva-gjor-den">Hva gjør SpywareMonitor?</h2>
     <p>SpywareMonitor ser på appene på telefonen din og stiller ett spørsmål: <strong>kan denne appen brukes til å overvåke deg?</strong> Den sjekker:</p>
     <ul class="check-list">
-      <li><strong>Alle installerte apper</strong>: kan den lese skjermen eller varslene dine, skjuler den ikonet, ble den installert fra en fil eller en datamaskin i stedet for en appbutikk, later den som den er en del av Android?</li>
-      <li><strong>En liste over kjente spionprogrammer</strong> (også kalt stalkerware), fra <a href="https://github.com/AssoEchap/stalkerware-indicators">Echap</a> (CC BY 4.0). Listen er bygget inn i appen.</li>
+      <li><strong>Alle installerte apper</strong>: kan den lese skjermen eller varslene dine, skjuler den ikonet, ble den installert fra en fil eller fra en datamaskin via USB i stedet for en appbutikk, later den som den er en del av Android?</li>
+      <li><strong>En liste over kjente spionprogrammer</strong> (også kalt stalkerware), fra <a href="https://github.com/AssoEchap/stalkerware-indicators">Echap</a> (CC BY 4.0): 132 apper. Listen er bygget inn i appen.</li>
+      <li><strong>Familie- og sporingsapper</strong>, som Life360 og Qustodio: 27 apper som ofte er helt normale. De vises i oransje, aldri i rødt, med en enkel forklaring.</li>
+      <li><strong>Tastaturet ditt</strong>: det ser alt du skriver, så appen sjekker hvor det kommer fra.</li>
       <li><strong>Telefoninnstillingene</strong>: finnes det en skjermlås, er USB-feilsøking og utvikleralternativer av, kan andre apper installere apper? Finnes det tegn på at telefonen er rootet?</li>
     </ul>
+    <p>Under <strong>Tilgang</strong> kan du også se hvilke apper som kan bruke mikrofon, posisjon, kamera, kontakter eller meldinger. Se <a href="#tilgang">Hva kan appene mine bruke?</a></p>
 
     <h3>Forlater noe telefonen min?</h3>
     <p>Nei. Appen har <strong>ingen internettilgang</strong>, så den kan ikke sende noe noe sted. Ikke til oss, ikke til noen. Les mer i <a href="personvern.html">personvernerklæringen</a>.</p>
@@ -220,23 +223,24 @@
     <h2 id="sjekk-skjermen">Hvordan leser jeg Sjekk-skjermen?</h2>
     <div class="help-row">
       <div>
-        <p>Åpne appen, så sjekker den telefonen på noen sekunder. Den store <strong>ringen</strong> viser resultatet:</p>
+        <p>Åpne appen, så sjekker den telefonen på noen sekunder. Det store <strong>skjoldet</strong> viser resultatet:</p>
         <ul class="check-list">
-          <li><span class="dot green" aria-hidden="true"></span><strong>Grønn</strong>: ingenting ble funnet som kan overvåke deg.</li>
-          <li><span class="dot orange" aria-hidden="true"></span><strong>Oransje</strong>: en app har tilgang som <em>kan</em> misbrukes. Ofte er det ufarlig, som en passordbehandler eller en app til en smartklokke. Se på det først.</li>
+          <li><span class="dot green" aria-hidden="true"></span><strong>Grønn</strong>: ingenting ble funnet som kan overvåke deg. Skjoldet fungerer da som en måler: det fylles opp og viser hvor trygg telefonen ser ut, for eksempel <em>90 % trygg</em>. Telefoninnstillinger som kan bli bedre, gjør at det ikke blir helt fullt.</li>
+          <li><span class="dot orange" aria-hidden="true"></span><strong>Oransje</strong>: en app har tilgang som <em>kan</em> misbrukes. Ofte er det ufarlig, som en passordbehandler eller en app til en smartklokke. Familie- og sporingsapper, som Life360, er også oransje. Se på det først.</li>
           <li><span class="dot red" aria-hidden="true"></span><strong>Rød</strong>: en app står på listen over <strong>kjente spionprogrammer</strong>.</li>
         </ul>
-        <p>Under ringen er det tre kort:</p>
+        <p>Under skjoldet er det tre kort:</p>
         <ul class="check-list">
           <li><strong>Apper</strong>: hvor mange apper som bør sjekkes.</li>
           <li><strong>Telefoninnstillinger</strong>: hvor mange innstillinger som gjør det lett for noen å komme inn.</li>
           <li><strong>Opplåsingslogg</strong> (Pro): når telefonen ble låst opp i dag.</li>
         </ul>
-        <p><strong>Trykk på ringen</strong>, eller på <strong>Apper</strong>, for å se hva som ble funnet. Dra skjermen ned for å sjekke igjen.</p>
+        <p><strong>Trykk på skjoldet</strong> for å se hva som trekker ned: appene som bør sjekkes, ellers telefoninnstillingene. Nederst står det når den siste sjekken var, for eksempel <em>Siste sjekk: for 2 minutter siden. Alt på telefonen er sjekket.</em> Dra skjermen ned for å sjekke igjen.</p>
+        <p>Har appen vært ute av syne i mer enn ett minutt? Da åpner den alltid på Sjekk igjen.</p>
       </div>
       <figure class="shot">
         <img src="../img/help/no/check.webp" width="540" height="1160" loading="lazy" decoding="async"
-             alt="Sjekk-skjermen i SpywareMonitor: en oransje ring med '1 app bør sjekkes', ringet inn i rødt, kortene Apper, Telefoninnstillinger og Opplåsingslogg i en rød ramme, og en pil til knappen for rask utgang øverst til høyre">
+             alt="Sjekk-skjermen i SpywareMonitor: et oransje skjold med '1 app bør sjekkes', ringet inn i rødt, kortene Apper, Telefoninnstillinger og Opplåsingslogg i en rød ramme, og en pil til knappen for rask utgang øverst til høyre">
         <figcaption>Sjekk-skjermen etter en sjekk som fant én app.</figcaption>
       </figure>
     </div>
@@ -244,9 +248,15 @@
     <h3>Hvilken app ble funnet, og hvorfor?</h3>
     <div class="help-row">
       <div>
-        <p>I fanen <strong>Apper</strong> står appene som kan brukes til å overvåke deg, øverst, under <strong>Bør sjekkes</strong> og <strong>Verdt en titt</strong>. Alle andre apper står nederst, slått sammen, så du også kan finne dem.</p>
-        <p>Under hver app ser du med noen få ord hva den kan, for eksempel <em>Kan lese skjermen · Installert via en datamaskin · Skjult</em>. <strong>Trykk på appen</strong> for å se alle grunnene, hvem som har laget den, og når den ble installert.</p>
-        <p>Apper som er installert fra en datamaskin via USB, står alltid under <strong>Verdt en titt</strong>. Ofte er det din egen app. Kjenner du appen fordi du la den der selv? Trykk på <strong>Jeg kjenner denne appen</strong>. Da teller den ikke lenger, og du får beskjed hvis den noen gang blir byttet ut med en annens versjon.</p>
+        <p>I fanen <strong>Apper</strong> står appene som kan brukes til å overvåke deg, øverst, under <strong>Bør sjekkes</strong> og <strong>Verdt en titt</strong>, hver på sitt eget kort.</p>
+        <p>Under hver app ser du med noen få ord hva den kan, for eksempel <em>Kan lese skjermen · Installert via en datamaskin · Skjult</em>. <strong>Trykk på appen</strong> for å se alle grunnene, hvem som har laget den, og når den ble installert. En app som fulgte med telefonen, viser <em>Fulgte med telefonen, signert av …</em>. Siden har én hovedknapp; de andre valgene ligger under <strong>Flere valg</strong>.</p>
+        <p>Kjenner du appen fordi du la den der selv? Trykk på <strong>Jeg kjenner denne appen</strong>. Da teller den ikke lenger, og du får beskjed hvis den noen gang blir byttet ut med en annens versjon.</p>
+        <p>Lenger ned, under <strong>Dine andre apper</strong>, er det tre kort. Hvert av dem åpner en egen skjerm:</p>
+        <ul class="check-list">
+          <li><strong>Disse kjenner du</strong>: appene du har merket som kjent.</li>
+          <li><strong>Alle andre apper</strong>: sjekket, ingenting å se på. Nyeste først, med søk.</li>
+          <li><strong>Tilgang</strong>: hva apper kan bruke på telefonen. Se <a href="#tilgang">Hva kan appene mine bruke?</a></li>
+        </ul>
         <p>Vil du se selv, uten appen? Les <a href="../hidden-apps-android.html" hreflang="en">How to find hidden apps on Android</a> (engelsk).</p>
       </div>
       <figure class="shot">
@@ -256,11 +266,21 @@
       </figure>
     </div>
 
+    <h3>En familie- eller sporingsapp ble funnet</h3>
+    <p>Apper som Life360, Qustodio, FamiSafe, Kaspersky Safe Kids eller Microsoft Family Safety er laget for å holde øye med noen, men de skjuler seg ikke. De er alltid <strong>oransje, aldri røde</strong>. Det er ofte normalt: foreldre bruker slike apper, og mange familier deler posisjonen med vilje. Det betyr noe hvis du ikke satte det opp selv, eller ikke vil det lenger: da kan noen andre følge deg. Satte du det opp selv? Trykk på <strong>Jeg kjenner denne appen</strong>, så flyttes den til <strong>Disse kjenner du</strong>.</p>
+
+    <h3>Installert via en datamaskin</h3>
+    <p>En app som er installert fra en datamaskin via USB, vises som <em>Installert via en datamaskin</em>, under <strong>Verdt en titt</strong>. Da hadde noen den ulåste telefonen din i hendene. Ofte er det din egen app eller en testapp: trykk da på <strong>Jeg kjenner denne appen</strong>. Kjenner du den ikke igjen? Da kan noen andre ha hatt telefonen din, slått på USB-feilsøking og installert appen fra en datamaskin.</p>
+
+    <h3 id="tilgang">Hva kan appene mine bruke? (Tilgang)</h3>
+    <p>Under <strong>Apper → Tilgang</strong> ser du for hver type tilgang hvilke apper som kan bruke den: mikrofon, posisjon, kamera, SMS, anrop, kontakter, og bilder og videoer. For hver type står det hva som er normalt, for eksempel <em>Normalt for samtaler, talemeldinger og video</em>. Appene er delt i <strong>Installert senere</strong> og <strong>Fulgte med telefonen</strong>.</p>
+    <p>Apper trenger tilgang for å gjøre jobben sin, så det meste her er normalt. Se på apper du ikke kjenner, og på <strong>spesiell tilgang</strong>: lese skjermen (tilgjengelighet), lese varsler, låse eller slette telefonen, alle filer og installere andre apper. Spesiell tilgang er sjelden og gir en app mye makt. Den er bare oransje når en app der bør sjekkes. Tilgang er gratis.</p>
+
     <h2 id="funnet">Noe ble funnet. Hva gjør jeg nå?</h2>
     <p class="warn"><strong>Ikke fjern appen med en gang.</strong> Å fjerne den, eller bytte passordene, kan varsle den som satte den der. Det kan gjøre situasjonen farligere. Ta vare på bevis først, og tenk på sikkerheten din. Mer i veiledningen <a href="../safe-steps-after-finding-spyware.html" hreflang="en">What to do if you find spyware on your phone</a> (engelsk).</p>
     <div class="help-row">
       <div>
-        <p>På siden til appen trykker du på <strong>Trygge steg</strong>. Da får du stegene i riktig rekkefølge:</p>
+        <p>På siden til appen, under <strong>Hva kan du gjøre?</strong>, trykker du på <strong>Trygge steg</strong>. Da får du stegene i riktig rekkefølge:</p>
         <ol class="steps">
           <li><strong>Ta vare på bevis</strong>: lagre bevisrapporten, eller ta skjermbilder av appen og hva den kan.</li>
           <li><strong>Få hjelp før du endrer noe</strong>: snakk om det med noen du stoler på, politiet eller en hjelpelinje, fra en telefon som ikke overvåkes.</li>
@@ -268,7 +288,7 @@
           <li><strong>Fjern appen</strong>, når du har tatt vare på bevisene og det føles trygt.</li>
           <li><strong>Tilbakestill telefonen</strong>, hvis appen kommer igjen eller ikke lar seg fjerne. Ta først sikkerhetskopi av bildene, et sted den andre ikke kommer til.</li>
         </ol>
-        <p>Hvert steg har en knapp som tar deg til riktig sted, for eksempel <strong>Lagre rapport</strong> eller <strong>Se appene</strong>.</p>
+        <p>Mange steg har en lenke som tar deg til riktig sted, for eksempel <strong>Lagre rapport</strong> eller <strong>Se appene</strong>. Hovedknappen på siden til appen er <strong>Lagre bevisrapport</strong>; de andre valgene ligger under <strong>Flere valg</strong>.</p>
       </div>
       <figure class="shot">
         <img src="../img/help/no/detail.webp" width="540" height="1160" loading="lazy" decoding="async"
@@ -280,7 +300,7 @@
     <h2 id="sikkerhet-fanen">Hva skjer? Velg det som passer i Sikkerhet-fanen</h2>
     <div class="help-row">
       <div>
-        <p>Åpne fanen <strong>Sikkerhet</strong>. Under <strong>Hva skjer?</strong> trykker du på det som passer. Appen foreslår allerede ett, basert på den siste sjekken.</p>
+        <p>Åpne fanen <strong>Sikkerhet</strong>. Under <strong>Hva skjer?</strong> trykker du på det som passer. Appen foreslår allerede ett, basert på den siste sjekken. Hver situasjon åpner en egen skjerm med stegene; pilen øverst til venstre tar deg tilbake.</p>
         <p>Øverst i fanen, under <strong>Beskytt denne appen</strong>, finner du også forkledning og PIN-lås.</p>
       </div>
       <figure class="shot">
@@ -304,16 +324,19 @@
     </ol>
 
     <h3>Telefoninnstillingene mine er ikke trygge</h3>
-    <p>Noen innstillinger gjør det lett for noen å komme inn på telefonen og installere apper i det skjulte. Du ser hver av dem med en knapp, <strong>Fiks dette</strong>, som åpner riktig sted i telefonens innstillinger. For eksempel: angi en skjermlås, slå av USB-feilsøking, slå av utvikleralternativer.</p>
+    <p>Noen innstillinger gjør det lett for noen å komme inn på telefonen og installere apper i det skjulte. Du ser hver av dem med en lenke, <strong>Fiks dette</strong>, som åpner riktig sted i telefonens innstillinger. For eksempel: angi en skjermlås, slå av USB-feilsøking, slå av utvikleralternativer.</p>
     <p>Finner appen tegn på at telefonen er <strong>rootet</strong>, ser du <em>Denne telefonen kan være rootet</em>. Rooting gir apper full kontroll over telefonen, også spionprogrammer. Har du ikke gjort det selv, be noen du stoler på om å se på det. Denne linjen vises bare når det finnes tegn.</p>
 
     <h3 id="overvaket">Jeg føler meg overvåket, men ingenting ble funnet</h3>
     <p>Overvåking skjer ofte via <strong>kontoer</strong>, ikke apper. Stegene:</p>
     <ol class="steps">
       <li><strong>Slutt å dele posisjonen din</strong> i Google Maps (profilbildet ditt, så Posisjonsdeling). Sjekk også apper som sporer familien.</li>
+      <li><strong>Få hjelp før du endrer noe</strong>: snakk om det først, fra en telefon som ikke overvåkes.</li>
       <li><strong>Sjekk enhetene på Google-kontoen</strong> og logg ut dem du ikke kjenner.</li>
       <li><strong>Sjekk e-post og nummer for gjenoppretting.</strong> Er de ikke dine, kan noen andre komme inn på kontoen.</li>
       <li><strong>Se etter en skjult sporer</strong>: en liten brikke i en veske eller bil kan vise hvor du er. Åpne Sikkerhet og nødssituasjoner i Innstillinger, så Varsler om ukjente sporere, og trykk Skann nå.</li>
+      <li><strong>Sjekk tastaturet</strong>: gjennom tastaturet kan et spionprogram se hva du skriver. Se hvilket tastatur som er på, og fjern et du ikke kjenner.</li>
+      <li><strong>Bytt PIN-koden</strong> (eller slå på skjermlås hvis du ikke har noen).</li>
     </ol>
     <p>Gjør endringer i kontoer på <strong>en annen telefon eller datamaskin</strong>, en som den andre ikke kommer til.</p>
 
@@ -338,8 +361,8 @@
       <li><strong>Automatiske sjekker</strong>: flere ganger om dagen, så en ny app som regel blir oppdaget samme dag. Du får bare et varsel når noe bør sjekkes. Det <strong>sier aldri hva som ble funnet</strong> og bruker aldri ordet spionprogram: det viser bare appens navn og <em>Trykk for å åpne</em>. Vil du, venter det en time. Slå dem på i <a href="#oppsett">steg 3 og 4 i oppsettet</a>.</li>
       <li><strong>Opplåsingslogg</strong>: spionprogrammer kommer vanligvis inn på en telefon mens noen har den opplåst i hendene. Loggen viser <strong>når telefonen ble låst opp</strong>, så du ser om det skjedde mens du ikke var der. Den viser bare vellykkede opplåsinger: ikke mislykkede forsøk, ikke hva som ble gjort og ikke hvem som gjorde det. Du gir selv tillatelse i Android (Brukstilgang), og kan slå det av der når som helst. Se <a href="#oppsett">steg 5</a>.</li>
       <li><strong>Historikk</strong>: når hvilken app ble installert, fikk tilgang eller ble fjernet. Se <a href="#historikk">Hvordan bruker jeg Historikk?</a></li>
-      <li><strong>Bevisrapport (PDF)</strong>: alle funn og historikken i én fil, til å vise politiet eller en hjelpelinje. Den lages på språket appen er på. Appen lager den på telefonen og åpner Androids delingsmeny; du bestemmer hvor den sendes. Filen får et nøytralt navn, for eksempel <em>report-2026-11-13-1430.pdf</em>, uten appens navn. Du finner den i Sikkerhet-fanen under <strong>Bevis</strong>.</li>
-      <li><strong>Forkledning og PIN-lås</strong>: se <a href="#oppsett">steg 1 og 2 i oppsettet</a>.</li>
+      <li><strong>Bevisrapport (PDF)</strong>: alle funn og historikken i én fil, til å vise politiet eller en hjelpelinje. Den lages på språket appen er på. Appen lager den på telefonen. Først viser den <strong>Før du deler</strong>: send rapporten til deg selv på en annen enhet, eller til noen du stoler på, og ikke bruk en e-post- eller chatte-app den andre kan se. Så åpnes Androids delingsmeny; du bestemmer hvor den sendes. Filen får et nøytralt navn, for eksempel <em>report-2026-11-13-1430.pdf</em>, uten appens navn. Du finner den i Sikkerhet-fanen under <strong>Bevis</strong>.</li>
+      <li><strong>Forkledning og PIN-lås</strong>: bare du kan åpne appen, med en egen PIN-kode. Se <a href="#oppsett">steg 1 og 2 i oppsettet</a>.</li>
     </ul>
     <p class="warn"><strong>Godt å vite:</strong> Android viser alltid appens navn øverst i et varsel. Derfor forkler oppsettet appen først: da viser varselet det hverdagslige navnet.</p>
 
@@ -355,7 +378,7 @@
 
     <section class="faq" id="faq" aria-labelledby="faq-h">
       <h2 id="faq-h">Vanlige spørsmål</h2>
-      <details><summary>Hvordan kan jeg se om noen overvåker Android-telefonen min?</summary><p>SpywareMonitor sjekker alle installerte apper for tilgang som kan brukes til å overvåke deg, for eksempel å lese skjermen eller varslene, skjule ikonet eller være installert utenfor en appbutikk. Den sammenligner også appene med en liste over kjente spionprogrammer (stalkerware) og sjekker telefoninnstillinger som gjør det lettere for noen å komme inn. Alt skjer på telefonen din; ingenting sendes noe sted.</p></details><details><summary>Hva betyr oransje og rødt i SpywareMonitor?</summary><p>Oransje betyr at en app har tilgang som kan misbrukes. Ofte er det ufarlig, for eksempel en passordbehandler eller en app til en smartklokke, så se på det først. Rødt betyr at appen står på listen over kjente spionprogrammer.</p></details><details><summary>SpywareMonitor fant noe. Skal jeg fjerne appen med en gang?</summary><p>Nei. Å fjerne en app eller bytte passord kan varsle den som satte den der. Ta først vare på bevis (bevisrapporten eller skjermbilder), og få så hjelp fra noen du stoler på, politiet eller en hjelpelinje, fra en telefon som ikke overvåkes. Fjern appen når det føles trygt. Sikkerhet-fanen viser stegene i riktig rekkefølge.</p></details><details><summary>Sender SpywareMonitor dataene mine noe sted?</summary><p>Nei. Appen har ingen internettilgang, så den kan ikke sende noe. Det den sjekker og registrerer, blir på telefonen og tas ikke med i skysikkerhetskopien.</p></details><details><summary>Kan den som overvåker meg se at jeg bruker SpywareMonitor?</summary><p>Det kan skje hvis de har telefonen din i hendene. Med Pro kan du forkle appen som Notater, Vær, Oppskrifter eller Planlegger og låse den med en PIN-kode. Varsler sier aldri hva som ble funnet, men Android viser alltid appens navn i dem. Kvitteringen fra Google på e-post og ordreloggen i Google Play viser også appens navn.</p></details><details><summary>Hva er den tryggeste måten å sette opp SpywareMonitor på?</summary><p>Gjør fem ting først, i Innstillinger: 1. Forkle appen, for eksempel som Vær. 2. Lås den med en PIN-kode som er en annen enn telefonens, og bruk bare fingeravtrykk hvis ingen andres er lagret. 3. Slå på Sjekk automatisk, så sjekker den flere ganger om dagen. 4. Har andre av og til telefonen din, slå på Vis varsler en time senere. 5. Slå på Opplåsingslogg. Husk pilen for rask utgang øverst til høyre.</p></details><details><summary>Jeg føler meg overvåket, men SpywareMonitor fant ingenting. Hva nå?</summary><p>Overvåking skjer ofte via kontoer, ikke apper. Slutt å dele posisjonen din i Google Maps, sjekk enhetene som er logget inn på Google-kontoen, sjekk e-post og nummer for gjenoppretting, og se etter en skjult sporer. Gjør endringer i kontoer på en annen telefon eller datamaskin.</p></details><details><summary>Er en sjekk for spionprogrammer 100 % sikker?</summary><p>Ingen sjekk kan love 100 %. Noen apper, for eksempel i en jobbprofil, forblir skjult, og nye spionprogrammer står kanskje ikke på listen ennå. Føler du deg fortsatt utrygg, snakk med politiet eller en hjelpelinje.</p></details>
+      <details><summary>Hvordan kan jeg se om noen overvåker Android-telefonen min?</summary><p>SpywareMonitor sjekker alle installerte apper for tilgang som kan brukes til å overvåke deg, for eksempel å lese skjermen eller varslene, skjule ikonet eller være installert utenfor en appbutikk. Den sammenligner også appene med en liste over kjente spionprogrammer (stalkerware) og sjekker telefoninnstillinger som gjør det lettere for noen å komme inn. Alt skjer på telefonen din; ingenting sendes noe sted.</p></details><details><summary>Hva betyr oransje og rødt i SpywareMonitor?</summary><p>Oransje betyr at en app har tilgang som kan misbrukes. Ofte er det ufarlig, for eksempel en passordbehandler eller en app til en smartklokke, så se på det først. Familie- og sporingsapper, som Life360, er alltid oransje, aldri røde. Rødt betyr at appen står på listen over kjente spionprogrammer.</p></details><details><summary>SpywareMonitor fant noe. Skal jeg fjerne appen med en gang?</summary><p>Nei. Å fjerne en app eller bytte passord kan varsle den som satte den der. Ta først vare på bevis (bevisrapporten eller skjermbilder), og få så hjelp fra noen du stoler på, politiet eller en hjelpelinje, fra en telefon som ikke overvåkes. Fjern appen når det føles trygt. Sikkerhet-fanen viser stegene i riktig rekkefølge.</p></details><details><summary>Sender SpywareMonitor dataene mine noe sted?</summary><p>Nei. Appen har ingen internettilgang, så den kan ikke sende noe. Det den sjekker og registrerer, blir på telefonen og tas ikke med i skysikkerhetskopien.</p></details><details><summary>Kan den som overvåker meg se at jeg bruker SpywareMonitor?</summary><p>Det kan skje hvis de har telefonen din i hendene. Med Pro kan du forkle appen som Notater, Vær, Oppskrifter eller Planlegger og låse den med en PIN-kode. Varsler sier aldri hva som ble funnet, men Android viser alltid appens navn i dem. Kvitteringen fra Google på e-post og ordreloggen i Google Play viser også appens navn.</p></details><details><summary>Hva er den tryggeste måten å sette opp SpywareMonitor på?</summary><p>Gjør fem ting først, i Innstillinger: 1. Forkle appen, for eksempel som Vær. 2. Lås den med en PIN-kode som er en annen enn telefonens, og bruk bare fingeravtrykk hvis ingen andres er lagret. 3. Slå på Sjekk automatisk, så sjekker den flere ganger om dagen. 4. Har andre av og til telefonen din, slå på Vis varsler en time senere. 5. Slå på Opplåsingslogg. Husk pilen for rask utgang øverst til høyre.</p></details><details><summary>Jeg føler meg overvåket, men SpywareMonitor fant ingenting. Hva nå?</summary><p>Overvåking skjer ofte via kontoer, ikke apper. Slutt å dele posisjonen din i Google Maps, sjekk enhetene som er logget inn på Google-kontoen, sjekk e-post og nummer for gjenoppretting, og se etter en skjult sporer. Gjør endringer i kontoer på en annen telefon eller datamaskin.</p></details><details><summary>Er en sjekk for spionprogrammer 100 % sikker?</summary><p>Ingen sjekk kan love 100 %. Noen apper, for eksempel i en jobbprofil, forblir skjult, og nye spionprogrammer står kanskje ikke på listen ennå. Føler du deg fortsatt utrygg, snakk med politiet eller en hjelpelinje.</p></details>
     </section>
 
     <h2 id="veiledninger">Flere veiledninger (på engelsk)</h2>
